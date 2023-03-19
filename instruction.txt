@@ -1,0 +1,14 @@
+Dockerfile: python
+FROM python
+WORKDIR /app
+COPY . /app
+CMD ["python", "bmi.py"]
+1)docker build .
+2)docker run -it 3763f3a37b85477e63bb2fb2c9f737e72f12c929aa676bb816d66903c41101a0
+3)docker run -it --name cont2_python 3763f3a37b85477e63bb2fb2c9f737e72f12c929aa676bb816d66903c41101a0
+docker stop cont2_python
+docker start cont2_python
+4)docker container prune
+docker image prune
+5)docker build -t image2_python:3 .
+6)docker run -it --rm --name cont3_python 3763f3a37b85477e63bb2fb2c9f737e72f12c929aa676bb816d66903c41101a0
